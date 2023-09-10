@@ -17,7 +17,7 @@ const NavLink = ({ children, href, onClick }: NavLinkProps) => {
     <Link
       href={href}
       className={cn(
-        'text-foreground/70 transition-colors hover:text-foreground',
+        'font-semibold text-foreground/70 transition-colors hover:text-foreground',
         pathname.includes(href) && 'text-foreground',
       )}
       onClick={onClick}>

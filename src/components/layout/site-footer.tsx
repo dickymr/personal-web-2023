@@ -16,7 +16,7 @@ const SiteFooter = () => {
       </div>
       <Button className="hover:bg-transparent" variant="ghost" size="icon">
         <a href={repoUrl} target="_blank">
-          <Icons.github className="h-5 w-5" />
+          <Icons.github className="h-5 w-5 opacity-70 hover:opacity-100" />
         </a>
       </Button>
     </footer>

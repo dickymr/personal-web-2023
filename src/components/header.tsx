@@ -10,7 +10,7 @@ import { siteConfig } from '@/config/site';
 const Header = () => {
   const renderIcon = (icon: keyof typeof Icons) => {
     const Icon = Icons[icon];
-    return <Icon className="h-5 w-5" />;
+    return <Icon className="h-5 w-5 opacity-70 hover:opacity-100" />;
   };
 
   const links = siteConfig.headerLinks;
