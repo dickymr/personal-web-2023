@@ -8,7 +8,7 @@ import { siteConfig } from '@/config/site';
 
 const SiteHeader = () => {
   return (
-    <header className="sticky top-0 w-full border-b bg-background px-4 md:px-0">
+    <header className="sticky top-0 z-10 w-full border-b bg-background px-4 md:px-0">
       <div className="flex h-20 items-center justify-between">
         <MobileNav items={siteConfig.navItems} />
         <MainNav items={siteConfig.navItems} />
