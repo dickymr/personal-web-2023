@@ -1,9 +1,11 @@
 import React from 'react';
 
+import Header from '@/components/header';
+
 const HomePage = () => {
   return (
-    <div>
-      <h1>HomePage</h1>
+    <div className="pt-7">
+      <Header />
       <br />
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio aspernatur laudantium sint explicabo. Corrupti

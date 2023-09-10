@@ -18,4 +18,10 @@ export const siteConfig = {
   links: {
     repo: 'https://github.com/dickymr/personal-web-2023',
   },
+  headerLinks: [
+    { icon: 'mail', link: 'mailto:dickymr.dev@gmail.com', text: 'Email' },
+    { icon: 'github', link: 'https://github.com/dickymr', text: 'Github' },
+    { icon: 'linkedin', link: 'https://linkedin.com/in/dickymr', text: 'LinkedIn' },
+    { icon: 'fileText', link: 'https://dickymr.read.cv/', text: 'CV' },
+  ],
 };
