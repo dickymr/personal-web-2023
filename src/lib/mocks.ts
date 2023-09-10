@@ -1,0 +1,70 @@
+export const projects = [
+  {
+    id: 11,
+    title: 'Pexyship - The Classic Battleship Game',
+    slug: 'pexyship',
+    preview_url: 'https://ship.pexygames.com/',
+    fe_github: null,
+    be_github: null,
+    description: 'Enjoy the nostalgic and strategic gameplay of naval war game.',
+    date: '2023-02-01',
+  },
+  {
+    id: 8,
+    title: 'Undawn Web Event - Zombie Slapper',
+    slug: 'undawn-web-event-zombie-slapper',
+    preview_url: null,
+    fe_github: null,
+    be_github: null,
+    description: 'Slap a zombie and climb the leaderboard',
+    date: '2022-07-22',
+  },
+  {
+    id: 7,
+    title: 'Free Fire Web Event - Pinball Crush',
+    slug: 'free-fire-web-event-pinball-crush',
+    preview_url: null,
+    fe_github: null,
+    be_github: null,
+    description: 'Win prizes and collect them or exchange for tokens',
+    date: '2022-05-17',
+  },
+  {
+    id: 6,
+    title: 'Blockman Go Web Event - Wild Wild Wet',
+    slug: 'blockman-go-web-event-wild-wild-wet',
+    preview_url: null,
+    fe_github: null,
+    be_github: null,
+    description: 'Shoot a water ball and capture the treasure islands',
+    date: '2022-04-12',
+  },
+  {
+    id: 119,
+    title: 'Shane Norman Marcus Chapman',
+    slug: 'blockman-go-web-event-wild-wild-wet-234',
+    preview_url: null,
+    fe_github: null,
+    be_github: null,
+    description: 'http://roucuhad.tr/fo',
+    date: '2022-04-12',
+  },
+];
+
+export const articles = [
+  {
+    id: 1,
+    title: 'Zustand: The Simple and Performant State Management Library for React',
+    date: '2023-04-17',
+    reading_time: 10,
+    views: 121,
+    description:
+      'Discover how Zustand can simplify your React state management. Learn what Zustand is, why you should use it, and how to get started',
+    content:
+      "![managing-react-state-zustand.png](https://res.cloudinary.com/dickymr/image/upload/v1681668962/managing_react_state_zustand_7a9188ad99.png)\n\nZustand is a German term that translates to \"state\" or \"condition\" in English. In the context of software development, Zustand is a library that provides a state management solution for React applications. Zustand was created by Michel Weststrate, the same developer behind MobX, another popular state management library for React.\\\nIn this article, we will explore what Zustand is and why you should consider using it in your React projects.\n\n#### What is Zustand?\nZustand is a lightweight state management solution for React that emphasizes simplicity, ease of use, and performance. Zustand uses a combination of the Context API and React hooks to provide a simple and intuitive way to manage state in your React components.\n\nWith Zustand, you can define state as a plain JavaScript object and create custom hooks to access and update that state from your React components. Zustand also provides built-in support for subscriptions and middleware, making it easy to add custom behavior to your state management logic.\n\nOne of the unique features of Zustand is its use of immer, a library that allows you to write code that looks like mutable updates to your state, but actually produces immutable updates under the hood. This makes it easier to write state update logic that is both concise and safe.\n\n#### Why use Zustand?\nThere are several reasons why you might consider using Zustand in your React projects:\n\n**1. Simplicity**\n\\\nZustand is designed to be simple and easy to use. Unlike other state management solutions that require you to learn complex concepts and patterns, Zustand provides a straightforward API that is easy to understand and use.\n\n**2. Performance**\n\\\nZustand is highly performant due to its use of plain JavaScript objects and optimized subscription logic. Because Zustand uses the Context API under the hood, it avoids the performance overhead of traditional Redux-style state management solutions.\n\n**3. Immutability**\n\\\nZustand's use of immer makes it easy to write safe and concise state update logic. Immer ensures that your state updates are always immutable, even if your code looks like it's making mutable updates. This can help prevent bugs and make your code easier to reason about.\n\n**4. Flexibility**\n\\\nZustand is a flexible state management solution that can be used in a variety of contexts. Whether you're building a small side project or a large enterprise application, Zustand can help you manage your state in a simple and intuitive way.\n\n#### Getting started with Zustand\nIf you're interested in trying out Zustand in your React projects, you can install it via npm or yarn:\n```\nnpm install zustand\n```\n\\\nOnce you have Zustand installed, you can create a store by defining a plain JavaScript object that represents your initial state:\n\n```\nimport create from 'zustand';\n\nconst useStore = create((set) => ({\n  count: 0,\n  increment: () => set((state) => ({ count: state.count + 1 })),\n  decrement: () => set((state) => ({ count: state.count - 1 })),\n}));\n```\n\\\nIn the code above, we define a store with an initial state of { count: 0 } and two methods to increment and decrement the count.\nTo use this store in a React component, we can create a custom hook using the useStore function:\n\n```\nimport { useStore } from './store';\n\nfunction Counter() {\n  const { count, increment, decrement } = useStore();\n\n  return (\n    <div>\n      <p>Count: {count}</p>\n      <button onClick={increment}>Increment</button>\n      <button onClick={decrement}>Decrement</button>\n    </div>\n  );\n}\n```\n\\\nIn the code above, we use the useStore hook to access the count, increment, and decrement properties of our store. We then use these properties to display the current count and attach event handlers to the increment and decrement buttons.\nWhen the user clicks one of the buttons, Zustand will update the state of our store and trigger a re-render of our component.\n\n#### Conclusion\nZustand is a simple and performant state management solution for React that can help you manage your application state in a safe and intuitive way. By using Zustand, you can simplify your code, improve performance, and reduce the cognitive overhead of working with complex state management solutions.\nIf you're interested in learning more about Zustand, you can check out the official documentation [here](https://www.dickymr.com/articles). There, you'll find detailed API documentation, examples, and tips for using Zustand in your own projects.\n\n\n\n",
+    slug: 'zustand-the-simple-and-performant-state-management-library-for-react',
+    createdAt: '2023-05-02T09:35:19.104Z',
+    updatedAt: '2023-07-11T09:19:07.908Z',
+    publishedAt: '2023-05-02T09:35:22.990Z',
+  },
+];
