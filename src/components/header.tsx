@@ -16,7 +16,7 @@ const Header = () => {
   const links = siteConfig.headerLinks;
 
   return (
-    <div>
+    <section>
       <div className="mb-2 text-xl font-bold">Hi, Happy {format(new Date(), 'EEEE')}!</div>
       <div className="mb-3 text-3xl font-bold">
         I&apos;m <span className="text-primary">Dicky Muhamad R.</span>
@@ -25,7 +25,7 @@ const Header = () => {
         My work is to create, execute, and improve code. It&apos;s as simple as that. Do you want more details? I can
         craft amazing things and turn any vision into reality. So, how can I help you?
       </p>
-      <div className="">
+      <div>
         {links.map(({ icon, link, text }) => (
           <TooltipProvider key={text}>
             <Tooltip>
@@ -41,7 +41,7 @@ const Header = () => {
           </TooltipProvider>
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 
