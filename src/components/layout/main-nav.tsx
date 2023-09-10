@@ -15,7 +15,7 @@ export interface MainNavProps {
 const MainNav = ({ items }: MainNavProps) => {
   return (
     <div className="flex w-full items-center justify-center md:mr-10 md:justify-between">
-      <Link href="/">
+      <Link className="w-28 text-center md:text-left" href="/">
         <Typewriter
           options={{
             wrapperClassName: 'text-xl font-bold text-primary',
