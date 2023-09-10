@@ -2,7 +2,6 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { useSelectedLayoutSegment } from 'next/navigation';
 import Typewriter from 'typewriter-effect';
 
 import NavLink from '@/components/layout/nav-link';
@@ -14,8 +13,6 @@ export interface MainNavProps {
 }
 
 const MainNav = ({ items }: MainNavProps) => {
-  const segment = useSelectedLayoutSegment();
-
   return (
     <div className="flex w-full items-center justify-center md:mr-10 md:justify-between">
       <Link href="/">
