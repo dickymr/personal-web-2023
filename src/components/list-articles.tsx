@@ -19,8 +19,8 @@ const ListArticles = () => {
       <div className="flex flex-col">
         {articles.map((article) => (
           <Link key={article.id} className="mb-3" href={`/articles/${article.slug}`}>
-            <h3 className="text-lg font-semibold text-primary">{article.title}</h3>
-            <p className="truncate">{article.description}</p>
+            <h3 className="mb-1 text-lg font-semibold text-primary">{article.title}</h3>
+            <p className="truncate text-sm">{article.description}</p>
           </Link>
         ))}
       </div>

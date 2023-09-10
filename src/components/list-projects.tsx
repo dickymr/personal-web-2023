@@ -19,8 +19,8 @@ const ListProjects = () => {
       <div className="flex flex-col">
         {projects.map((project) => (
           <Link key={project.id} className="mb-3" href={`/projects/${project.slug}`}>
-            <h3 className="text-lg font-semibold text-primary">{project.title}</h3>
-            <p className="truncate">{project.description}</p>
+            <h3 className="mb-1 text-lg font-semibold text-primary">{project.title}</h3>
+            <p className="truncate text-sm">{project.description}</p>
           </Link>
         ))}
       </div>
