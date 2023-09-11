@@ -1,3 +1,5 @@
+import { Link } from '@/types';
+
 export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
@@ -19,9 +21,9 @@ export const siteConfig = {
     repo: 'https://github.com/dickymr/personal-web-2023',
   },
   headerLinks: [
-    { icon: 'mail', link: 'mailto:dickymr.dev@gmail.com', text: 'Email' },
-    { icon: 'github', link: 'https://github.com/dickymr', text: 'Github' },
-    { icon: 'linkedin', link: 'https://linkedin.com/in/dickymr', text: 'LinkedIn' },
-    { icon: 'fileText', link: 'https://dickymr.read.cv/', text: 'CV' },
-  ],
+    { key: 'email', icon: 'email', label: 'Email' },
+    { key: 'github', icon: 'github', label: 'Github' },
+    { key: 'linkedin', icon: 'linkedin', label: 'LinkedIn' },
+    { key: 'cv', icon: 'cv', label: 'CV' },
+  ] as Link[],
 };

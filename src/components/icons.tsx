@@ -4,9 +4,9 @@ export type Icon = LucideIcon;
 
 export const Icons = {
   arrowRight: ArrowRight,
-  fileText: FileText,
+  cv: FileText,
   linkedin: Linkedin,
-  mail: Mail,
+  email: Mail,
   menu: Menu,
   sun: Sun,
   moon: Moon,
