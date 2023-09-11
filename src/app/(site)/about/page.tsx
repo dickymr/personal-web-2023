@@ -22,7 +22,7 @@ const AboutPage = async () => {
           <h1 className="mb-1 text-center text-xl font-bold md:text-left">{profile.name}</h1>
           <p className="text-center text-sm md:text-left">
             {profile.title} at{' '}
-            <a className="hover:underline" href={profile.company_url} target="_blank">
+            <a className="hover:underline" href={profile.company_url} target="_blank" rel="noreferrer">
               {profile.company}
             </a>
           </p>

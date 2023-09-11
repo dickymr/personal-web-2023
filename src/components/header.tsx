@@ -33,7 +33,7 @@ const Header = async () => {
           <TooltipProvider key={link.key}>
             <Tooltip>
               <TooltipTrigger className="mr-3">
-                <a href={profile['github']} target="_blank">
+                <a href={profile['github']} target="_blank" rel="noreferrer">
                   {renderIcon(link.icon)}
                 </a>
               </TooltipTrigger>

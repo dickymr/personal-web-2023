@@ -15,7 +15,7 @@ const SiteFooter = () => {
         © {currentYear} <span className="text-primary">Dicky Muhamad R</span>
       </div>
       <Button className="hover:bg-transparent" variant="ghost" size="icon">
-        <a href={repoUrl} target="_blank">
+        <a href={repoUrl} target="_blank" rel="noreferrer">
           <Icons.github className="h-5 w-5 opacity-70 hover:opacity-100" />
         </a>
       </Button>
