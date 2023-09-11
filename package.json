@@ -6,7 +6,8 @@
     "dev": "next dev -p 2081",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "clean": "rimraf .next .swc out coverage"
   },
   "dependencies": {
     "@portabletext/react": "^3.0.7",
@@ -17,15 +18,10 @@
     "@radix-ui/react-tooltip": "^1.0.6",
     "@sanity/image-url": "^1.0.2",
     "@sanity/vision": "^3.16.4",
-    "@types/node": "20.6.0",
-    "@types/react": "18.2.21",
-    "@types/react-dom": "18.2.7",
     "autoprefixer": "10.4.15",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.0.0",
     "date-fns": "^2.30.0",
-    "eslint": "8.49.0",
-    "eslint-config-next": "13.4.19",
     "lucide-react": "^0.274.0",
     "next": "13.4.19",
     "next-sanity": "^5.4.6",
@@ -43,7 +39,15 @@
     "typewriter-effect": "^2.20.1"
   },
   "devDependencies": {
+    "@types/node": "20.6.0",
+    "@types/react": "18.2.21",
+    "@types/react-dom": "18.2.7",
+    "@typescript-eslint/eslint-plugin": "^6.6.0",
+    "@typescript-eslint/parser": "^6.6.0",
+    "eslint": "^8.49.0",
+    "eslint-config-next": "13.4.19",
     "prettier": "^3.0.3",
-    "prettier-plugin-tailwindcss": "^0.5.4"
+    "prettier-plugin-tailwindcss": "^0.5.4",
+    "rimraf": "^5.0.1"
   }
 }
