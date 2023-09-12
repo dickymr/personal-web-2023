@@ -28,3 +28,14 @@ export type Profile = {
   linkedin: string;
   cv: string;
 };
+
+export type Article = {
+  _id: string;
+  title: string;
+  slug: string;
+  publishedAt: string;
+  readingTime: number;
+  view: number;
+  description: string;
+  markdown: string;
+};

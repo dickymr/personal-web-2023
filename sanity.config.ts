@@ -1,6 +1,7 @@
 import { defineConfig } from 'sanity';
 import { deskTool } from 'sanity/desk';
 import { visionTool } from '@sanity/vision';
+import { markdownSchema } from 'sanity-plugin-markdown';
 
 import { apiVersion, dataset, projectId } from './src/sanity/env';
 import { schema } from './src/sanity/schema';
@@ -12,5 +13,5 @@ export default defineConfig({
   projectId,
   dataset,
   schema,
-  plugins: [deskTool(), visionTool({ defaultApiVersion: apiVersion })],
+  plugins: [deskTool(), visionTool({ defaultApiVersion: apiVersion }), markdownSchema()],
 });

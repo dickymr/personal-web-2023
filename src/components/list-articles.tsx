@@ -3,9 +3,13 @@ import Link from 'next/link';
 
 import { Icons } from '@/components/icons';
 
-import { articles } from '@/lib/mocks';
+import { getArticles } from '@/sanity/lib/query';
 
-const ListArticles = () => {
+import { Article } from '@/types';
+
+const ListArticles = async () => {
+  const articles: Article[] = await getArticles(0, 5);
+
   return (
     <section>
       <div className="mb-4 flex justify-between">
@@ -18,7 +22,7 @@ const ListArticles = () => {
       </div>
       <div className="flex flex-col">
         {articles.map((article) => (
-          <Link key={article.id} className="mb-3" href={`/articles/${article.slug}`}>
+          <Link key={article._id} className="mb-3" href={`/articles/${article.slug}`}>
             <h3 className="mb-1 text-lg font-semibold text-primary">{article.title}</h3>
             <p className="truncate text-sm">{article.description}</p>
           </Link>
