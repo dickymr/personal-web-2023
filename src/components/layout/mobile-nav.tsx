@@ -29,7 +29,7 @@ const MobileNav = ({ items }: MobileNavProps) => {
       <SheetContent side="left" className="pl-1 pr-0">
         <div className="flex flex-col space-y-10 px-7 pt-10">
           {items.map((nav: Nav) => (
-            <NavLink key={nav.key} href={nav.href} setIsOpen={setIsOpen} onClick={() => setIsOpen(false)}>
+            <NavLink key={nav.key} href={nav.href} onClick={() => setIsOpen(false)}>
               {nav.label}
             </NavLink>
           ))}
