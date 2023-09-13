@@ -2,11 +2,14 @@ import { type SchemaTypeDefinition } from 'sanity';
 
 import profile from './schemas/profile';
 import articles from './schemas/articles';
+import projects from './schemas/projects';
+import tags from './schemas/tags';
+import languages from './schemas/languages';
+import feTechs from './schemas/feTechs';
+import beTechs from './schemas/beTechs';
+import deployments from './schemas/deployments';
 import blockContent from './schemas/blockContent';
-import post from './schemas/post';
-import author from './schemas/author';
-import category from './schemas/category';
 
 export const schema: { types: SchemaTypeDefinition[] } = {
-  types: [profile, articles, blockContent, post, author, category],
+  types: [profile, articles, projects, tags, languages, feTechs, beTechs, deployments, blockContent],
 };
