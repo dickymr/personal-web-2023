@@ -9,7 +9,7 @@ import { getArticles } from '@/sanity/lib/query';
 import { Article } from '@/types';
 
 const ArticlesPage = async () => {
-  const articles: Article[] = await getArticles(0, 5);
+  const articles: Article[] = await getArticles();
 
   return (
     <div className="py-7">
