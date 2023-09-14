@@ -1,9 +1,7 @@
 import React from 'react';
-import Link from 'next/link';
-import { format } from 'date-fns';
 
 import Breadcrumbs from '@/components/breadcrumbs';
-import { Card, CardContent } from '@/components/ui/card';
+import CardArticle from '@/components/card-article';
 
 import { getArticles } from '@/sanity/lib/query';
 
@@ -28,17 +26,13 @@ const ArticlesPage = async () => {
       </section>
       <section>
         {articles.map((article) => (
-          <Link key={article._id} href={`articles/${article.slug}`}>
-            <Card className="mb-5 rounded-lg">
-              <CardContent className="px-5 py-4">
-                <div className="mb-1 text-xs text-foreground/70">
-                  {format(new Date(article.publishedAt), 'MMMM d, yyyy')}
-                </div>
-                <h2 className="mb-1 text-lg font-semibold">{article.title}</h2>
-                <p className="truncate text-sm">{article.description}</p>
-              </CardContent>
-            </Card>
-          </Link>
+          <CardArticle
+            key={article.slug}
+            slug={article.slug}
+            description={article.description}
+            title={article.title}
+            date={article.publishedAt}
+          />
         ))}
       </section>
     </div>
