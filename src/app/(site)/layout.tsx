@@ -18,6 +18,7 @@ export const metadata: Metadata = {
     default: siteConfig.name,
     template: `%s - ${siteConfig.name}`,
   },
+  robots: { follow: true, index: true },
   description: siteConfig.description,
   keywords: ['Dicky', 'Dickymr', 'Dicky Muhamad R', 'Frontend Engineer', 'Frontend Web Developer'],
   viewport: 'width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no',
@@ -37,6 +38,9 @@ export const metadata: Metadata = {
 export default function SiteLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
+      <head>
+        <script async src="https://analytics.umami.is/script.js" data-website-id={process.env.NEXT_PUBLIC_UMAMI_ID} />
+      </head>
       <body className={(inter.className, 'bg-background')}>
         <NextTopLoader height={2} color="#6D28D9" showSpinner={false} />
         <Providers>

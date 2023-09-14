@@ -5,7 +5,7 @@ export type SiteConfig = typeof siteConfig;
 export const siteConfig = {
   name: 'Dicky Muhamad R',
   description:
-    'Dicky Muhamad R, an Associate Frontend Engineer at Garena Indonesia with 2 years of experience. Passionate about technology and building user-friendly web applications. Always learning and eager to take on new challenges.',
+    'This is the online portfolio and blog of Dicky Muhamad R, where you can find my projects and my opinions on website development.',
   url: 'https://dickymr.com/',
   icons: {
     appleTouch: '',
@@ -17,13 +17,14 @@ export const siteConfig = {
     { key: 'articles', label: 'Articles', href: '/articles' },
     { key: 'about', label: 'About', href: '/about' },
   ],
-  links: {
-    repo: 'https://github.com/dickymr/personal-web-2023',
-  },
   headerLinks: [
     { key: 'email', icon: 'email', label: 'Email' },
     { key: 'github', icon: 'github', label: 'Github' },
     { key: 'linkedin', icon: 'linkedin', label: 'LinkedIn' },
     { key: 'cv', icon: 'cv', label: 'CV' },
   ] as Link[],
+  footerLinks: [
+    { label: 'Source Code', href: 'https://github.com/dickymr/personal-web-2023', isExternal: true },
+    { label: 'Analytics', href: process.env.NEXT_PUBLIC_SHARE_URL, isExternal: true },
+  ],
 };
