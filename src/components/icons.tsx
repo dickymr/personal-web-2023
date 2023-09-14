@@ -8,6 +8,8 @@ import {
   Moon,
   Github,
   ExternalLink,
+  Home,
+  ChevronRight,
   type LucideIcon,
 } from 'lucide-react';
 
@@ -23,4 +25,6 @@ export const Icons = {
   moon: Moon,
   github: Github,
   external: ExternalLink,
+  home: Home,
+  chevronRight: ChevronRight,
 };
