@@ -11,7 +11,7 @@ export type LinkProps = {
 const Link = ({ href, label, isExternal }: LinkProps) => {
   return (
     <a
-      className="text-end transition-colors hover:cursor-pointer hover:text-foreground"
+      className="text-center transition-colors hover:cursor-pointer hover:text-foreground md:text-end"
       href={href}
       target={isExternal ? '_blank' : ''}
       rel="noreferrer">
@@ -26,9 +26,9 @@ const SiteFooter = () => {
   const links = siteConfig.footerLinks;
 
   return (
-    <footer className="bg-red flex justify-between border-t px-4 pb-8 pt-4 text-sm text-foreground/70 md:px-0">
-      <div>© {currentYear} Dicky Muhamad R</div>
-      <div className="flex flex-col gap-2">
+    <footer className="bg-red flex flex-col-reverse border-t px-4 pb-8 pt-4 text-sm text-foreground/70 md:flex-row md:justify-between md:px-0">
+      <div className="text-center md:text-left">© {currentYear} Dicky Muhamad R</div>
+      <div className="mb-4 flex flex-col gap-2 md:mb-0">
         {links.map(({ label, href = '', isExternal }) => (
           <Link key={label} label={label} href={href} isExternal={isExternal} />
         ))}

@@ -8,6 +8,6 @@ export const MarkdownComponents = {
   h2: ({ node, ...props }) => <h2 className="mb-1 text-xl font-bold" {...props} />,
   p: ({ node, ...props }) => <p className="mb-5" {...props} />,
   pre: ({ node, ...props }) => (
-    <pre className="mb-4 rounded-lg bg-foreground/5 px-4 py-4 font-serif text-sm" {...props} />
+    <pre className="mb-4 overflow-auto rounded-lg bg-foreground/5 px-4 py-4 font-serif text-sm" {...props} />
   ),
 };

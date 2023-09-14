@@ -19,7 +19,7 @@ export type BreadcrumbItemProps = {
 
 const BreadcrumbItem = ({ crumb, isHomeItem, isLastItem }: BreadcrumbItemProps) => {
   if (isLastItem) {
-    return <span className="text-foreground/70">{crumb.label}</span>;
+    return <span className="truncate text-foreground/70">{crumb.label}</span>;
   }
 
   return (
