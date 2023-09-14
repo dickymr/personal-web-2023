@@ -1,8 +1,9 @@
 import React from 'react';
 import { PortableText } from '@portabletext/react';
 
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+import Breadcrumbs from '@/components/breadcrumbs';
 import { RichTextComponents } from '@/components/rich-text-components';
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 
 import { getProfile } from '@/sanity/lib/query';
 
@@ -13,6 +14,14 @@ const AboutPage = async () => {
 
   return (
     <div className="py-7">
+      <section className="mb-6">
+        <Breadcrumbs
+          items={[
+            { path: '/', label: 'Home' },
+            { path: '/', label: 'About' },
+          ]}
+        />
+      </section>
       <section className="mb-10 flex flex-col items-center justify-center md:flex-row md:justify-start">
         <Avatar className="mb-5 mr-5 h-24 w-24 md:mb-0">
           <AvatarImage className="object-cover" src={profile.avatar.image} />

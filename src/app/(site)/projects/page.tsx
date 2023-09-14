@@ -1,5 +1,6 @@
 import React from 'react';
 
+import Breadcrumbs from '@/components/breadcrumbs';
 import CardProject from '@/components/card-project';
 
 import { getProjects } from '@/sanity/lib/query';
@@ -11,6 +12,14 @@ const ProjectsPage = async () => {
 
   return (
     <div className="py-7">
+      <section className="mb-6">
+        <Breadcrumbs
+          items={[
+            { path: '/', label: 'Home' },
+            { path: '/', label: 'Projects' },
+          ]}
+        />
+      </section>
       <section className="mb-10">
         <h1 className="mb-2 text-xl font-bold">Projects</h1>
         <p>Here are a few projects I&apos;ve worked on recently</p>

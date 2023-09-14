@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import { format } from 'date-fns';
 
+import Breadcrumbs from '@/components/breadcrumbs';
 import { Card, CardContent } from '@/components/ui/card';
 
 import { getArticles } from '@/sanity/lib/query';
@@ -13,6 +14,14 @@ const ArticlesPage = async () => {
 
   return (
     <div className="py-7">
+      <section className="mb-6">
+        <Breadcrumbs
+          items={[
+            { path: '/', label: 'Home' },
+            { path: '/', label: 'Articles' },
+          ]}
+        />
+      </section>
       <section className="mb-10">
         <h1 className="mb-2 text-xl font-bold">Articles</h1>
         <p>Posts related to some of the latest technologies</p>

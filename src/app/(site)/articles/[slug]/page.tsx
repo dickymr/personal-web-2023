@@ -2,6 +2,7 @@ import React from 'react';
 import { format } from 'date-fns';
 import ReactMarkdown from 'react-markdown';
 
+import Breadcrumbs from '@/components/breadcrumbs';
 import { MarkdownComponents } from '@/components/markdown-components';
 
 import { getArticleBySlug } from '@/sanity/lib/query';
@@ -20,6 +21,15 @@ const ArticlePage = async ({ params: { slug } }: ArticlePageProps) => {
 
   return (
     <div className="py-7">
+      <section className="mb-6">
+        <Breadcrumbs
+          items={[
+            { path: '/', label: 'Home' },
+            { path: '/articles', label: 'Articles' },
+            { path: '/', label: article.title },
+          ]}
+        />
+      </section>
       <section className="mb-8">
         <h1 className="mb-2 text-2xl font-bold">{article.title}</h1>
         <p className="text-sm">

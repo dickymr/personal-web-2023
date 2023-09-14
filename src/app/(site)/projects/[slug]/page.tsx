@@ -1,6 +1,7 @@
 import React from 'react';
 import { format } from 'date-fns';
 
+import Breadcrumbs from '@/components/breadcrumbs';
 import Carousel from '@/components/carousel';
 import { Icons } from '@/components/icons';
 import { Badge } from '@/components/ui/badge';
@@ -21,6 +22,15 @@ const ProjectPage = async ({ params: { slug } }: ProjectPageProps) => {
 
   return (
     <div className="py-7">
+      <section className="mb-8">
+        <Breadcrumbs
+          items={[
+            { path: '/', label: 'Home' },
+            { path: '/projects', label: 'Projects' },
+            { path: '/projects', label: project.title },
+          ]}
+        />
+      </section>
       <section className="mb-12">
         <Carousel images={project.images} />
       </section>
