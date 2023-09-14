@@ -5,7 +5,7 @@ export type SiteConfig = typeof siteConfig;
 export const siteConfig = {
   name: 'Dicky Muhamad R',
   description:
-    'This is the online portfolio and blog of Dicky Muhamad R, where you can find my projects and my opinions on website development.',
+    'This is the online portfolio and blog of me, where you can find my projects and my opinions on website development.',
   url: 'https://dickymr.com/',
   icons: {
     appleTouch: '',
