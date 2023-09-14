@@ -11,7 +11,6 @@ import { getProjectBySlug } from '@/sanity/lib/query';
 import { Project } from '@/types';
 
 interface ProjectPageProps {
-  children: React.ReactNode;
   params: {
     slug: 'string';
   };

@@ -10,7 +10,6 @@ import { getArticleBySlug } from '@/sanity/lib/query';
 import { Article } from '@/types';
 
 interface ArticlePageProps {
-  children: React.ReactNode;
   params: {
     slug: 'string';
   };
