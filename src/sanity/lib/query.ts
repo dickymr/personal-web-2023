@@ -2,7 +2,8 @@ import { groq } from 'next-sanity';
 import { client } from './client';
 
 export async function getProfile() {
-  const resp = client.fetch(groq`*[_type == "profile"][0]{
+  const resp = client.fetch(
+    groq`*[_type == "profile"][0]{
     _id,
     name,
     avatar {
@@ -17,13 +18,16 @@ export async function getProfile() {
     github,
     linkedin,
     cv
-  }`);
+  }`,
+    { next: { revalidate: 0 } },
+  );
 
   return resp;
 }
 
 export async function getArticles(start = 0, end = 100) {
-  const resp = client.fetch(groq`*[_type == "articles"] | order(publishedAt desc) [${start}...${end}]{
+  const resp = client.fetch(
+    groq`*[_type == "articles"] | order(publishedAt desc) [${start}...${end}]{
     _id,
     title,
     "slug": slug.current,
@@ -32,13 +36,16 @@ export async function getArticles(start = 0, end = 100) {
     view,
     description,
     content
-  }`);
+  }`,
+    { next: { revalidate: 0 } },
+  );
 
   return resp;
 }
 
 export async function getArticleBySlug(slug: string) {
-  const resp = client.fetch(groq`*[_type == "articles" && slug.current == "${slug}"][0]{
+  const resp = client.fetch(
+    groq`*[_type == "articles" && slug.current == "${slug}"][0]{
     _id,
     title,
     "slug": slug.current,
@@ -47,13 +54,16 @@ export async function getArticleBySlug(slug: string) {
     view,
     description,
     markdown
-  }`);
+  }`,
+    { next: { revalidate: 0 } },
+  );
 
   return resp;
 }
 
 export async function getProjects(start = 0, end = 100) {
-  const resp = client.fetch(groq`*[_type == "projects"] | order(date desc) [${start}...${end}]{
+  const resp = client.fetch(
+    groq`*[_type == "projects"] | order(date desc) [${start}...${end}]{
     _id,
     title,
     "slug": slug.current,
@@ -68,13 +78,16 @@ export async function getProjects(start = 0, end = 100) {
     beTechs[]->{name},
     deployments[]->{name},
     images[]{"url": asset->url}
-  }`);
+  }`,
+    { next: { revalidate: 0 } },
+  );
 
   return resp;
 }
 
 export async function getProjectBySlug(slug: string) {
-  const resp = client.fetch(groq`*[_type == "projects" && slug.current == "${slug}"][0]{
+  const resp = client.fetch(
+    groq`*[_type == "projects" && slug.current == "${slug}"][0]{
     _id,
     title,
     "slug": slug.current,
@@ -89,7 +102,9 @@ export async function getProjectBySlug(slug: string) {
     beTechs[]->{name},
     deployments[]->{name},
     images[]{"url": asset->url}
-  }`);
+  }`,
+    { next: { revalidate: 0 } },
+  );
 
   return resp;
 }
