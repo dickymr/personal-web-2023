@@ -39,3 +39,20 @@ export type Article = {
   description: string;
   markdown: string;
 };
+
+export type Project = {
+  _id: string;
+  title: string;
+  slug: string;
+  date: string;
+  description: string;
+  previewUrl: string;
+  feGithub: string;
+  beGithub: string;
+  tags: { name: string }[];
+  language: string;
+  feTechs: { name: string }[];
+  beTechs: { name: string }[];
+  deployments: { name: string }[];
+  images: { url: string }[];
+};

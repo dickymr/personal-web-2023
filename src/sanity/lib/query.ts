@@ -51,3 +51,45 @@ export async function getArticleBySlug(slug: string) {
 
   return resp;
 }
+
+export async function getProjects(start = 0, end = 100) {
+  const resp = client.fetch(groq`*[_type == "projects"] | order(date desc) [${start}...${end}]{
+    _id,
+    title,
+    "slug": slug.current,
+    date,
+    description,
+    previewUrl,
+    feGithub,
+    beGithub,
+    tags[]->{name},
+    "language": language->name,
+    feTechs[]->{name},
+    beTechs[]->{name},
+    deployments[]->{name},
+    images[]{"url": asset->url}
+  }`);
+
+  return resp;
+}
+
+export async function getProjectBySlug(slug: string) {
+  const resp = client.fetch(groq`*[_type == "projects" && slug.current == "${slug}"][0]{
+    _id,
+    title,
+    "slug": slug.current,
+    date,
+    description,
+    previewUrl,
+    feGithub,
+    beGithub,
+    tags[]->{name},
+    "language": language->name,
+    feTechs[]->{name},
+    beTechs[]->{name},
+    deployments[]->{name},
+    images[]{"url": asset->url}
+  }`);
+
+  return resp;
+}

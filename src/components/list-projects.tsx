@@ -3,9 +3,13 @@ import Link from 'next/link';
 
 import { Icons } from '@/components/icons';
 
-import { projects } from '@/lib/mocks';
+import { getProjects } from '@/sanity/lib/query';
 
-const ListProjects = () => {
+import { Project } from '@/types';
+
+const ListProjects = async () => {
+  const projects: Project[] = await getProjects(0, 5);
+
   return (
     <section>
       <div className="mb-4 flex justify-between">
@@ -18,7 +22,7 @@ const ListProjects = () => {
       </div>
       <div className="flex flex-col">
         {projects.map((project) => (
-          <Link key={project.id} className="mb-3" href={`/projects/${project.slug}`}>
+          <Link key={project._id} className="mb-3" href={`/projects/${project.slug}`}>
             <h3 className="mb-1 text-lg font-semibold text-primary">{project.title}</h3>
             <p className="truncate text-sm">{project.description}</p>
           </Link>

@@ -70,8 +70,8 @@ export default defineType({
       of: [{ type: 'reference', to: { type: 'beTechs' } }],
     }),
     defineField({
-      name: 'deployment',
-      title: 'Deployment',
+      name: 'deployments',
+      title: 'Deployments',
       type: 'array',
       of: [{ type: 'reference', to: { type: 'deployments' } }],
     }),

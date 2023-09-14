@@ -58,3 +58,17 @@
     overflow-y: scroll;
   }
 }
+
+.swiper-button-prev {
+  left: 2.5% !important;
+}
+
+.swiper-button-next {
+  right: 2.5% !important;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  font-size: 1.25rem !important;
+  font-weight: bold;
+}

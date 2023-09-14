@@ -1,4 +1,15 @@
-import { ArrowRight, FileText, Linkedin, Mail, Menu, Sun, Moon, Github, type LucideIcon } from 'lucide-react';
+import {
+  ArrowRight,
+  FileText,
+  Linkedin,
+  Mail,
+  Menu,
+  Sun,
+  Moon,
+  Github,
+  ExternalLink,
+  type LucideIcon,
+} from 'lucide-react';
 
 export type Icon = LucideIcon;
 
@@ -11,4 +22,5 @@ export const Icons = {
   sun: Sun,
   moon: Moon,
   github: Github,
+  external: ExternalLink,
 };
