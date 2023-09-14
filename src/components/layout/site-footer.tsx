@@ -11,7 +11,7 @@ export type LinkProps = {
 const Link = ({ href, label, isExternal }: LinkProps) => {
   return (
     <a
-      className="transition-colors hover:cursor-pointer hover:text-foreground hover:underline"
+      className="text-end transition-colors hover:cursor-pointer hover:text-foreground"
       href={href}
       target={isExternal ? '_blank' : ''}
       rel="noreferrer">
