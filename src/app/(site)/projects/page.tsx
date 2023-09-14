@@ -1,4 +1,5 @@
 import React from 'react';
+import type { Metadata } from 'next';
 
 import Breadcrumbs from '@/components/breadcrumbs';
 import CardProject from '@/components/card-project';
@@ -6,6 +7,10 @@ import CardProject from '@/components/card-project';
 import { getProjects } from '@/sanity/lib/query';
 
 import { Project } from '@/types';
+
+export const metadata: Metadata = {
+  title: 'Projects',
+};
 
 const ProjectsPage = async () => {
   const projects: Project[] = await getProjects();

@@ -1,4 +1,5 @@
 import React from 'react';
+import type { Metadata } from 'next';
 import { PortableText } from '@portabletext/react';
 
 import Breadcrumbs from '@/components/breadcrumbs';
@@ -8,6 +9,10 @@ import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { getProfile } from '@/sanity/lib/query';
 
 import { Profile } from '@/types';
+
+export const metadata: Metadata = {
+  title: 'About',
+};
 
 const AboutPage = async () => {
   const profile: Profile = await getProfile();

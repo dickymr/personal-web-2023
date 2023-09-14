@@ -16,6 +16,14 @@ interface ProjectPageProps {
   };
 }
 
+export async function generateMetadata({ params: { slug } }: ProjectPageProps) {
+  const project: Project = await getProjectBySlug(slug);
+
+  return {
+    title: project.title,
+  };
+}
+
 const ProjectPage = async ({ params: { slug } }: ProjectPageProps) => {
   const project: Project = await getProjectBySlug(slug);
 

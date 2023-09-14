@@ -15,6 +15,14 @@ interface ArticlePageProps {
   };
 }
 
+export async function generateMetadata({ params: { slug } }: ArticlePageProps) {
+  const article: Article = await getArticleBySlug(slug);
+
+  return {
+    title: article.title,
+  };
+}
+
 const ArticlePage = async ({ params: { slug } }: ArticlePageProps) => {
   const article: Article = await getArticleBySlug(slug);
 

@@ -1,4 +1,5 @@
 import React from 'react';
+import type { Metadata } from 'next';
 
 import Breadcrumbs from '@/components/breadcrumbs';
 import CardArticle from '@/components/card-article';
@@ -6,6 +7,10 @@ import CardArticle from '@/components/card-article';
 import { getArticles } from '@/sanity/lib/query';
 
 import { Article } from '@/types';
+
+export const metadata: Metadata = {
+  title: 'Articles',
+};
 
 const ArticlesPage = async () => {
   const articles: Article[] = await getArticles();
