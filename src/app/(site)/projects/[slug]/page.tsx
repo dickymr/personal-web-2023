@@ -114,7 +114,8 @@ const ProjectPage = async ({ params: { slug } }: ProjectPageProps) => {
             className="flex items-center text-lg font-semibold hover:cursor-pointer hover:underline"
             href={project.previewUrl}
             target="_blank"
-            rel="noreferrer">
+            rel="noreferrer"
+            data-umami-event={`Preview: ${project.previewUrl}`}>
             Preview <Icons.external className="ml-2 h-5 w-5" />
           </a>
         </div>

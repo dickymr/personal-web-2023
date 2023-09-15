@@ -14,7 +14,8 @@ const Link = ({ href, label, isExternal }: LinkProps) => {
       className="text-center transition-colors hover:cursor-pointer hover:text-foreground md:text-end"
       href={href}
       target={isExternal ? '_blank' : ''}
-      rel="noreferrer">
+      rel="noreferrer"
+      data-umami-event={`Footer Link: ${label}`}>
       {label}
     </a>
   );

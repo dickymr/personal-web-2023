@@ -33,7 +33,11 @@ const Header = async () => {
           <TooltipProvider key={link.key}>
             <Tooltip>
               <TooltipTrigger className="mr-3">
-                <a href={profile['github']} target="_blank" rel="noreferrer">
+                <a
+                  href={profile[link.icon]}
+                  target="_blank"
+                  rel="noreferrer"
+                  data-umami-event={`Header Link: ${link.label}`}>
                   {renderIcon(link.icon)}
                 </a>
               </TooltipTrigger>
