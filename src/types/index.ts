@@ -12,6 +12,14 @@ export interface Link {
   icon: 'email' | 'github' | 'linkedin' | 'cv';
 }
 
+export interface searchParamType {
+  sort?: string | undefined;
+  order?: string | undefined;
+  tags?: string | undefined;
+  start?: number;
+  end?: number;
+}
+
 export type Profile = {
   _id: string;
   name: string;

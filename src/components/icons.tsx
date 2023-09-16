@@ -10,6 +10,8 @@ import {
   ExternalLink,
   Home,
   ChevronRight,
+  Filter,
+  ArrowDownUp,
   type LucideIcon,
 } from 'lucide-react';
 
@@ -27,4 +29,6 @@ export const Icons = {
   external: ExternalLink,
   home: Home,
   chevronRight: ChevronRight,
+  filter: Filter,
+  sort: ArrowDownUp,
 };

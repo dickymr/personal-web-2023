@@ -8,7 +8,7 @@ import { getArticles } from '@/sanity/lib/query';
 import { Article } from '@/types';
 
 const ListArticles = async () => {
-  const articles: Article[] = await getArticles(0, 5);
+  const articles: Article[] = await getArticles({ start: 0, end: 5 });
 
   return (
     <section>

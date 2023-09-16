@@ -1,5 +1,6 @@
 import { groq } from 'next-sanity';
 import { client } from './client';
+import { searchParamType } from '@/types';
 
 export async function getProfile() {
   const resp = client.fetch(
@@ -25,9 +26,9 @@ export async function getProfile() {
   return resp;
 }
 
-export async function getArticles(start = 0, end = 100) {
+export async function getArticles({ sort = 'date', order = 'desc', start = 0, end = 100 }: searchParamType = {}) {
   const resp = client.fetch(
-    groq`*[_type == "articles"] | order(publishedAt desc) [${start}...${end}]{
+    groq`*[_type == "articles"] | order(${sort === 'date' ? 'publishedAt' : sort} ${order}) [${start}...${end}]{
     _id,
     title,
     "slug": slug.current,
@@ -61,9 +62,9 @@ export async function getArticleBySlug(slug: string) {
   return resp;
 }
 
-export async function getProjects(start = 0, end = 100) {
+export async function getProjects({ sort = 'date', order = 'desc', start = 0, end = 100 }: searchParamType = {}) {
   const resp = client.fetch(
-    groq`*[_type == "projects"] | order(date desc) [${start}...${end}]{
+    groq`*[_type == "projects"] | order(${sort} ${order}) [${start}...${end}]{
     _id,
     title,
     "slug": slug.current,
