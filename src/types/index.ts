@@ -62,5 +62,5 @@ export type Project = {
   feTechs: { name: string }[];
   beTechs: { name: string }[];
   deployments: { name: string }[];
-  images: { url: string }[];
+  images: { secure_url: string }[];
 };

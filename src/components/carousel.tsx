@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Keyboard } from 'swiper/modules';
 
@@ -8,7 +9,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 
 export type CarouselProps = {
-  images: { url: string }[];
+  images: { secure_url: string }[];
 };
 
 const Carousel = ({ images }: CarouselProps) => {
@@ -23,7 +24,7 @@ const Carousel = ({ images }: CarouselProps) => {
         <SwiperSlide key={i}>
           <div className="flex items-center justify-center">
             <img
-              src={image.url}
+              src={image.secure_url}
               alt="image"
               className="h-full max-h-[22.5rem] w-full max-w-[100%] select-none object-contain"
             />

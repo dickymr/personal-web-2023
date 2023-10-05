@@ -79,7 +79,9 @@ export async function getProjects({ sort = 'date', order = 'desc', start = 0, en
     feTechs[]->{name},
     beTechs[]->{name},
     deployments[]->{name},
-    images[]{"url": asset->url}
+    images[] {
+      secure_url
+    },
   }`,
     { next: { revalidate: 0 } },
   );
@@ -103,7 +105,9 @@ export async function getProjectBySlug(slug: string) {
     feTechs[]->{name},
     beTechs[]->{name},
     deployments[]->{name},
-    images[]{"url": asset->url}
+    images[] {
+      secure_url
+    },
   }`,
     { next: { revalidate: 0 } },
   );

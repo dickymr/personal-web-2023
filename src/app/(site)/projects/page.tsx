@@ -48,7 +48,7 @@ const ProjectsPage = async ({ searchParams }: ProjectsPageProps) => {
           <CardProject
             key={slug}
             slug={slug}
-            thumbnail={images[0].url}
+            thumbnail={images[0].secure_url}
             title={title}
             tags={tags}
             description={description}

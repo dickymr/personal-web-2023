@@ -19,7 +19,13 @@ const CardProject = ({ slug, thumbnail, tags, title, description }: CardProjectP
       <Card className="h-full rounded-lg shadow-none">
         <CardContent className="px-5 py-5">
           <div className="relative mb-5 h-48 w-full">
-            <Image className="rounded object-cover" src={thumbnail} alt="image" fill />
+            <Image
+              className="rounded object-cover"
+              src={thumbnail || ''}
+              alt="image"
+              fill
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            />
           </div>
           <h2 className="mb-1 truncate text-lg font-semibold leading-6">{title}</h2>
           <div className="mb-2">
