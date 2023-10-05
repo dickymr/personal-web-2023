@@ -29,7 +29,7 @@ const AboutPage = async () => {
       </section>
       <section className="mb-10 flex flex-col items-center justify-center md:flex-row md:justify-start">
         <Avatar className="mb-5 mr-5 h-24 w-24 md:mb-0">
-          <AvatarImage className="object-cover" src={profile.avatar.image} />
+          <AvatarImage className="object-cover" src={profile.avatar.secure_url} />
           <AvatarFallback>DMR</AvatarFallback>
         </Avatar>
         <div>

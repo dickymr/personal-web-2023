@@ -7,8 +7,9 @@ export async function getProfile() {
     groq`*[_type == "profile"][0]{
     _id,
     name,
+    image,
     avatar {
-      "image": asset->url
+      secure_url
     },
     title,
     company,

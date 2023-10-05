@@ -40,6 +40,7 @@
     "react-markdown": "^8.0.7",
     "react-wrap-balancer": "^1.1.0",
     "sanity": "^3.16.4",
+    "sanity-plugin-cloudinary": "^1.1.1",
     "sanity-plugin-markdown": "^4.1.0",
     "styled-components": "5.2",
     "swiper": "^10.2.0",

@@ -1,6 +1,7 @@
 import { defineConfig } from 'sanity';
 import { deskTool } from 'sanity/desk';
 import { visionTool } from '@sanity/vision';
+import { cloudinaryAssetSourcePlugin, cloudinarySchemaPlugin } from 'sanity-plugin-cloudinary';
 import { markdownSchema } from 'sanity-plugin-markdown';
 
 import { apiVersion, dataset, projectId } from './src/sanity/env';
@@ -13,5 +14,11 @@ export default defineConfig({
   projectId,
   dataset,
   schema,
-  plugins: [deskTool(), visionTool({ defaultApiVersion: apiVersion }), markdownSchema()],
+  plugins: [
+    deskTool(),
+    visionTool({ defaultApiVersion: apiVersion }),
+    cloudinaryAssetSourcePlugin(),
+    cloudinarySchemaPlugin(),
+    markdownSchema(),
+  ],
 });

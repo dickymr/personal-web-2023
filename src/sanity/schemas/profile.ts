@@ -67,16 +67,12 @@ export default defineType({
     defineField({
       name: 'avatar',
       title: 'Avatar',
-      type: 'image',
-      options: {
-        hotspot: true,
-      },
+      type: 'cloudinary.asset',
     }),
   ],
   preview: {
     select: {
       title: 'name',
-      media: 'avatar',
     },
   },
 });

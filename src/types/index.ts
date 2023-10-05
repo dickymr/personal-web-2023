@@ -24,7 +24,7 @@ export type Profile = {
   _id: string;
   name: string;
   avatar: {
-    image: string;
+    secure_url: string;
   };
   title: string;
   company: string;
