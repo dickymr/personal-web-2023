@@ -21,7 +21,7 @@ export async function getProfile() {
     linkedin,
     cv
   }`,
-    { next: { revalidate: 0 } },
+    { next: { revalidate: 60 } },
   );
 
   return resp;
@@ -39,7 +39,7 @@ export async function getArticles({ sort = 'date', order = 'desc', start = 0, en
     description,
     content
   }`,
-    { next: { revalidate: 0 } },
+    { next: { revalidate: 60 } },
   );
 
   return resp;
@@ -57,7 +57,7 @@ export async function getArticleBySlug(slug: string) {
     description,
     markdown
   }`,
-    { next: { revalidate: 0 } },
+    { next: { revalidate: 60 } },
   );
 
   return resp;
@@ -83,7 +83,7 @@ export async function getProjects({ sort = 'date', order = 'desc', start = 0, en
       secure_url
     },
   }`,
-    { next: { revalidate: 0 } },
+    { next: { revalidate: 60 } },
   );
 
   return resp;
@@ -109,7 +109,7 @@ export async function getProjectBySlug(slug: string) {
       secure_url
     },
   }`,
-    { next: { revalidate: 0 } },
+    { next: { revalidate: 60 } },
   );
 
   return resp;
