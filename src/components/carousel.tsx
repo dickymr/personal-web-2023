@@ -1,3 +1,6 @@
+// eslint-disable-next-line
+// @ts-ignore
+
 'use client';
 
 import React from 'react';
@@ -51,7 +54,6 @@ const Carousel = ({ images }: CarouselProps) => {
 
   return (
     <Slider {...settings}>
-      {/* ts-ignore */}
       {images.map((image, i) => (
         <div key={i} className="relative h-[15rem] md:h-[25rem]">
           <Image className="object-contain" src={image.secure_url} alt="image" fill />
