@@ -1,5 +1,5 @@
 // eslint-disable-next-line
-// @ts-ignore
+// @ts-nocheck
 
 'use client';
 
