@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('../../node_modules/slick-carousel/slick/slick.css');
+@import url('../../node_modules/slick-carousel/slick/slick-theme.css');
+
 @layer base {
   @layer base {
     @layer base {
@@ -57,22 +60,20 @@
   * {
     @apply border-border;
   }
+
   body {
     @apply bg-background text-foreground;
     overflow-y: scroll;
   }
 }
 
-.swiper-button-prev {
-  left: 2.5% !important;
+.slick-arrow::before {
+  display: none;
 }
 
-.swiper-button-next {
-  right: 2.5% !important;
-}
-
-.swiper-button-prev::after,
-.swiper-button-next::after {
-  font-size: 1.25rem !important;
-  font-weight: bold;
+.slick-disabled {
+  filter: grayscale(1);
+  opacity: 0.5;
+  touch-action: none;
+  pointer-events: none;
 }

@@ -9,6 +9,8 @@ import {
   Github,
   ExternalLink,
   Home,
+  ChevronLeftCircle,
+  ChevronRightCircle,
   ChevronRight,
   Filter,
   ArrowDownUp,
@@ -29,6 +31,8 @@ export const Icons = {
   external: ExternalLink,
   home: Home,
   chevronRight: ChevronRight,
+  chevronLeftCircle: ChevronLeftCircle,
+  chevronRightCircle: ChevronRightCircle,
   filter: Filter,
   sort: ArrowDownUp,
 };

@@ -1,37 +1,62 @@
 'use client';
 
 import React from 'react';
+import Image from 'next/image';
 
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Keyboard } from 'swiper/modules';
+import Slider from 'react-slick';
 
-import 'swiper/css';
-import 'swiper/css/navigation';
+import { Icons } from '@/components/icons';
+import { cn } from '@/lib/utils';
 
 export type CarouselProps = {
   images: { secure_url: string }[];
 };
 
 const Carousel = ({ images }: CarouselProps) => {
+  const NextArrow = ({ className, onClick }: any): JSX.Element => (
+    <div
+      className={cn(
+        className,
+        'absolute right-1 z-10',
+        'flex items-center justify-center',
+        'h-7 w-7 border text-xl text-primary/50 hover:text-primary/75',
+      )}
+      onClick={onClick}>
+      <Icons.chevronRightCircle className="h-full w-full" />
+    </div>
+  );
+
+  const PrevArrow = ({ className, onClick }: any): JSX.Element => (
+    <div
+      className={cn(
+        className,
+        'absolute left-1 z-10',
+        'flex items-center justify-center',
+        'h-7 w-7 border text-xl text-primary/50 hover:text-primary/75',
+      )}
+      onClick={onClick}>
+      <Icons.chevronLeftCircle className="h-full w-full" />
+    </div>
+  );
+
+  const settings = {
+    dots: false,
+    infinite: false,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    nextArrow: <NextArrow />,
+    prevArrow: <PrevArrow />,
+  };
+
   return (
-    <Swiper
-      wrapperClass="flex items-center"
-      navigation={true}
-      modules={[Navigation, Keyboard]}
-      pagination={{}}
-      keyboard={{ enabled: true }}>
+    <Slider {...settings}>
       {images.map((image, i) => (
-        <SwiperSlide key={i}>
-          <div className="flex items-center justify-center">
-            <img
-              src={image.secure_url}
-              alt="image"
-              className="h-full max-h-[22.5rem] w-full max-w-[100%] select-none object-contain"
-            />
-          </div>
-        </SwiperSlide>
+        <div key={i} className="relative h-[15rem] md:h-[25rem]">
+          <Image className="object-contain" src={image.secure_url} alt="image" fill />
+        </div>
       ))}
-    </Swiper>
+    </Slider>
   );
 };
 
