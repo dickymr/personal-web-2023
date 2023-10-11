@@ -23,7 +23,7 @@ interface ProjectsPageProps {
 const ProjectsPage = async ({ searchParams }: ProjectsPageProps) => {
   const { sort, order } = searchParams;
 
-  const projects: Project[] = await getProjects({ sort, order });
+  const projects: Project[] = await getProjects({ start: 0, end: 100, sort, order });
 
   return (
     <div className="py-7">
