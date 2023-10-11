@@ -107,6 +107,39 @@ const ProjectPage = async ({ params: { slug } }: ProjectPageProps) => {
             </div>
           </div>
         )}
+
+        {(project.feGithub || project.beGithub) && (
+          <div className="mb-3 flex items-center">
+            <div className="w-32">Repository</div>
+            <div className="mr-6">:</div>
+            <div className="flex items-center">
+              {project.feGithub && (
+                <a
+                  className="mr-2 flex items-center hover:cursor-pointer hover:underline"
+                  href={project.feGithub}
+                  target="_blank"
+                  rel="noreferrer"
+                  data-umami-event={`Preview: ${project.feGithub}`}>
+                  <Badge className="px-1 py-0" variant={'outline'}>
+                    Frontend <Icons.external className="ml-1 h-3 w-3" />
+                  </Badge>
+                </a>
+              )}
+              {project.beGithub && (
+                <a
+                  className="flex items-center hover:cursor-pointer hover:underline"
+                  href={project.feGithub}
+                  target="_blank"
+                  rel="noreferrer"
+                  data-umami-event={`Preview: ${project.beGithub}`}>
+                  <Badge className="px-1 py-0" variant={'outline'}>
+                    Backend <Icons.external className="ml-1 h-3 w-3" />
+                  </Badge>
+                </a>
+              )}
+            </div>
+          </div>
+        )}
       </section>
       <section>
         {project.previewUrl && (
