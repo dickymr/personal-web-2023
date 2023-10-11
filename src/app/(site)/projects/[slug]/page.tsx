@@ -128,7 +128,7 @@ const ProjectPage = async ({ params: { slug } }: ProjectPageProps) => {
               {project.beGithub && (
                 <a
                   className="flex items-center hover:cursor-pointer hover:underline"
-                  href={project.feGithub}
+                  href={project.beGithub}
                   target="_blank"
                   rel="noreferrer"
                   data-umami-event={`Preview: ${project.beGithub}`}>
